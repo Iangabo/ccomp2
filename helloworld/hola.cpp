@@ -14,22 +14,19 @@ using namespace std;
 
 int main()
 {
-  int n=0,c=0,c2=0,res=0,nc=0;
-  cout<<"Introduce un numero: "; cin>>n;
-  for(c=1;c<=n;c++)
-  {
-    for(c2=1;c2<=c;c2++)
-    {
-      res=c%c2;
-      if(res==0)
-      {
-        nc=nc+1;
-      }
-    }
-    if(nc==2)
-    {
-      cout<<" "<<c;
-    }
-    nc=0;
-  }
+  int num,n,p,i;
+  cout<<"Ingresa un numero";
+  cin>>num;
+  n=2;
+  i=0;
+  while (i<=num)
+  { for (p=2;n%p!=0;p=p+1);
+  if(p==n)
+  {i=i+1;
+   if(i==num)
+   cout<<n<<endl;
+}
+n=n+1;
+}
+return 0;
 }
