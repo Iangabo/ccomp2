@@ -3,8 +3,8 @@
 using namespace std;
 int main()
 {
-int n,mayor,menor,valor,m;
-float prom;
+int n,mayor,menor,valor;
+float prom,m;
 double acumula=0.0;
 m=0;
 cout <<"Cuantos numeros quiere ingresar: " << endl;
@@ -32,6 +32,7 @@ prom=(m)/n;
 cout << "el promedio es: "<<prom;
 return 0;
 }
+
 
 //factorial
   #include <iostream>
