@@ -1,3 +1,5 @@
+/numero primo
+
 #include <iostream>
 
 using namespace std;
@@ -17,6 +19,7 @@ int main(){
 
 
 /*
+saber si el año es bisiesto o no
 #include <iostream>
 using namespace std;
 int main(){
