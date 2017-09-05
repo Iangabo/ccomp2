@@ -39,3 +39,36 @@ int main()
   return 0;
   
 }
+  
+/*
+//Imprimir hello world el numero de veces que ingreses con while
+#include <iostream>
+using namespace std;
+int main()
+{
+  int N;
+  cin >> N;
+  while( N-- > 0)
+  {
+    cout << "Hello world!/n" ;
+  }
+  return 0;
+}
+*/
+//""Con do-while
+#include <iostream>
+using namespace std;
+int main()
+{
+  int N;
+  cin >> N;
+  do {
+    cout << "Hello world!/n" ;
+    
+  
+  }while( --N > 0);
+ 
+  return 0;
+}
+
+
