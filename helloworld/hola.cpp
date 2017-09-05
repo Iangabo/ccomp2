@@ -8,7 +8,7 @@ int main()
     cout << "Hello world!" << endl;
     return 0;
 }
-
+/la posicion de un numero primo
 #include<iostream>
 using namespace std;
 
