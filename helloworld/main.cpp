@@ -23,3 +23,19 @@ cout << "el mayor es: "<<mayor<<endl;
 cout << "el menor es: "<<menor<<endl;
 prom=(mayor+menor)/2;
 cout << "el promedio es: "<<prom;
+  
+//factorial
+  #include <iostream>
+using namespace std;
+int main()
+{
+  short number;
+  cout << "Enter a number: " ;
+  cin >> number;
+  cout << "The factorial of  " << number << " is  ";
+  int acumulator =1;
+  for(; number > 0; acumulator *= number--);
+  cout << acumulator << "./n";
+  return 0;
+  
+}
