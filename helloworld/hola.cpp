@@ -30,17 +30,28 @@ n=n+1;
 }
 return 0;
 }
-//Año bisieyto
+//Año bisiesto
 #include <iostream>
 using namespace std;
-int main(){
-      int a;
-      cout<<"Ingresa anio"<<endl;
-      cin>>a;
+
+bool esbiciesto(int a){
      if(a % 4 == 0 && (a % 100 != 0 || a % 400 == 0)){
-         cout<<"El anio "<<a<<"es bisiesto ";
+        return true;
      }else{
-         cout<<"El anio "<<a<<"no es bisiesto ";
+        return false;
      }
-      return 0;
+}
+
+int main(){
+  int n;
+ cout<<"Ingresa anio"<<endl;
+ cin >> n;
+ if (esbiciesto(n)){
+   cout <<"si lo es";
+   
+ }
+ else{
+   cout << "no lo es";
+ }
+ return 0;
 }
