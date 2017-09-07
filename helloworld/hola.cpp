@@ -30,3 +30,17 @@ n=n+1;
 }
 return 0;
 }
+//Año bisieyto
+#include <iostream>
+using namespace std;
+int main(){
+      int a;
+      cout<<"Ingresa anio"<<endl;
+      cin>>a;
+     if(a % 4 == 0 && (a % 100 != 0 || a % 400 == 0)){
+         cout<<"El anio "<<a<<"es bisiesto ";
+     }else{
+         cout<<"El anio "<<a<<"no es bisiesto ";
+     }
+      return 0;
+}
