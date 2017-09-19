@@ -54,25 +54,23 @@ int main(){
 //Antes: [1 ,2, 3, 4, 5]
 	//Después: [5, 4, 3, 2, 1]
 	
-	#include <iostream>
+#include <iostream>
 using namespace std;
 int main(){
-  int array[5],x=0,aux;
+  int array[5],tam = 5,x=0,aux;
   array[0]=1;
   array[1]=2;
   array[2]=3;
   array[3]=4;
   array[4]=5;
-  while((5-x)>x){
+  while((tam-x)/2 > x){
     aux=array[x];
-    array[x]=array[5-x];
-    array[5-x]=aux;
-    x=x+1;
+    array[x]=array[tam-1-x];
+    array[tam-1-x]=aux;
+    x++;
   }
-  for(x=0;x<10;x++)
+  for(x=0;x<tam;x++)
   cout<<array[x]<<endl;
- 
-}
 
 //3.	Implemente la función de la pregunta anterior en su versión recursiva.
 #include <iostream>
