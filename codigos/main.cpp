@@ -10,6 +10,27 @@ La salida de su programa debe ser:
 	1 2 3 4 5 6 12 18 24 23 22 21 20 19 13 7 8 9 10 11 17 16 15 14
 */
 
+#include <iostream>
+using namespace std;
+int main(){
+  int i, j,;
+while (num!=max){
+    for (i=tope,j=tope; j<= ene; j++){
+        num++;
+        meterEnVector(); }
+    for (i=tope+1, j=ene; i<=eme; i++){
+        num++;
+        meterEnVector(); // definila
+    }
+    for (i=eme, j=ene-1;j>=tope; j
+        num++;
+        meterEnVector(); // 
+    }
+    for (i=eme-1, j=tope; i>tope; i--) 
+        num++;
+        meterEnVector(); 
+}
+
 //1.	Implemente una función recursiva que reciba un arreglo de enteros y su tamaño y retorne la suma de los elementos del arreglo.
 #include <iostream>
 using namespace std;
