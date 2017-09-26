@@ -82,3 +82,22 @@ int main()
 }
 
 
+//intercambio de cadenas con punteros
+#include <iostream> 
+using namespace std;
+void strcpy(char *s, char *t){
+	while ((*s++=*t++)!='\0'){
+	
+	}
+	
+	
+}
+int main(){
+  char s[]="cien";
+  char t[10];
+  strcpy(t,s);
+  cout<<t<<endl;
+  return 0;
+}
+
+
