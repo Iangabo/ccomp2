@@ -1,4 +1,5 @@
 //Project Euler
+//P1
 //Si enumeramos todos los números naturales por debajo de 10 que son múltiplos de 3 o 5, obtenemos 3, 5, 6 y 9. La suma de estos múltiplos es 23.
 
 //Calcula la suma de todos los múltiplos de 3 o 5 por debajo de 1000.
@@ -19,7 +20,7 @@ int main()
 	}
 	cout << "Sum: " << sum << endl;
 }
-
+//P2
 //Cada nuevo término en la secuencia de Fibonacci se genera sumando los dos términos anteriores. Comenzando con 1 y 2, los primeros 10 términos serán:
 
 //1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
@@ -65,7 +66,7 @@ int main()
 }
 
 
-
+//3
 //Los factores primos de 13195 son 5, 7, 13 y 29.
 
 //¿Cuál es el factor primo más grande del número 600851475143?
