@@ -1,11 +1,24 @@
-//Class
+//class
 #ifndef JUGADOR_H
 #define JUGADOR_H
+#ifndef EQUIPO_H
 
 #include <iostream>
 #include <string>
 
 using namespace std;
+
+class equipo{
+public:
+    string name,class jugadores;
+    };
+    equipo(){
+        equipo(string x,class y){
+            name= string x;
+            jugadores=class y;
+
+        }
+    }
 
 class jugador {
   public:
@@ -50,15 +63,20 @@ class jugador {
 #endif
 
 //main
+
 #include <iostream>
 #include "jugador.h"
+#include "equipo.h"
 
 
 using namespace std;
 
 int main()
 {
-	jugador Reus("Reus", "Delantero", 11, 8);
+    equipo Borussia Dortmund=("Borussia Dortmund",jugador);
+    Borussia Dortmund.print();
+
+    jugador Reus("Reus", "Delantero", 11, 8);
     Reus.print();
     jugador Abameyang("Abameyang", "Delantero centro", 17, 8);
     Abameyang.print();
@@ -83,8 +101,31 @@ int main()
     jugador Shurrle("Shurrle", "Extremo Izquierdo", 21, 7);
     Shurrle.print();
 
+    equipo Bayern Munich=("Bayern Munich",jugador);
+    Bayern Munich.print();
 
-
+    jugador Never =("Neuer";"arquero";1;3);
+    Never.print();
+    jugador Gotze=("Gotze";"defensa";20;6);
+    Gotze.print();
+    jugador Hummels=("Hummels";"defensa";5;5);
+    Hummels.print();
+    jugador Rafinha=("Rafinha";"defensa";13;6);
+    Rafinha.print();
+    jugador Ribery=("Ribéry";"centrocampista";7;3);
+    Ribery.print();
+    jugador Xabi=("Xabi";"centrocampista";14;6);
+    Xabi.print();
+    jugador Kimmich=("Kimmich";"centrocampista";32;8);
+    Kimmich.print();
+    jugador Lewandowski=("Lewandowski";"delantero";9;9);
+    Lewandowski.print();
+    jugador Müller=("Müller";"delantero";25;8);
+    Müller.print();
+    jugador Robben =("Robben";"delantero";10;7);
+    Robben.print();
+    jugador=("Lahm";"ccentrocampista";21;6);
+    Lahm.print();
 
 
 	return 0;
