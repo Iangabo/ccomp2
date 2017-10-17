@@ -7,6 +7,30 @@
 
 using namespace std;
 
+class equipo {
+public:
+    string name;
+    int size;
+    equipo(){
+    }
+    equipo(string x,int y){
+
+        name=x;
+        size=y;
+    }
+    void setname(string x){
+        name=x;
+    }
+    void setsize(int y){
+        size=y;
+    }
+    void print(){
+        cout<<"El equipo es: "<<name<<endl;
+    }
+
+};
+
+
 class jugador {
   public:
     string nombre,posicion;
