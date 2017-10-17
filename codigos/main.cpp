@@ -1,24 +1,13 @@
 //class
 #ifndef JUGADOR_H
 #define JUGADOR_H
-#ifndef EQUIPO_H
+
 
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-class equipo{
-public:
-    string name,class jugador;
-    };
-    equipo(){
-        equipo(string x,class y){
-            name= string x;
-            jugador=class y;
-
-        }
-    }
 
 class jugador {
   public:
@@ -66,15 +55,14 @@ class jugador {
 
 #include <iostream>
 #include "jugador.h"
-#include "equipo.h"
+
 
 
 using namespace std;
 
 int main()
 {
-    equipo Borussia Dortmund=("Borussia Dortmund",jugador);
-    Borussia Dortmund.print();
+ 
 
     jugador Reus("Reus", "Delantero", 11, 8);
     Reus.print();
@@ -101,8 +89,7 @@ int main()
     jugador Shurrle("Shurrle", "Extremo Izquierdo", 21, 7);
     Shurrle.print();
 
-    equipo Bayern Munich=("Bayern Munich",jugador);
-    Bayern Munich.print();
+  
 
     jugador Never =("Neuer";"arquero";1;3);
     Never.print();
