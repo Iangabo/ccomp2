@@ -8,6 +8,10 @@ using namespace std;
 int main()
 {
 
+
+    equipo BorussiaDortmund("Borussia Dortmund",11);
+    BorussiaDortmund.print();
+
     jugador Reus("Reus", "Delantero", 11, 8);
     Reus.print();
     jugador Abameyang("Abameyang", "Delantero centro", 17, 8);
