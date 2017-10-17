@@ -58,6 +58,9 @@ class jugador {
       nombre=y;
     }
     void print (){
+        int x=x+1;
+        cout<<"Jugador: "<<++x<<endl;
+
         if (agresividad>5){
             cout <<"El jugador esta agresivo!!,dejalo jugar!"<<endl;
         }
