@@ -10,7 +10,7 @@ using namespace std;
 
 class equipo{
 public:
-    string name,class jugadores;
+    string name,class jugador;
     };
     equipo(){
         equipo(string x,class y){
