@@ -15,7 +15,7 @@ public:
     equipo(){
         equipo(string x,class y){
             name= string x;
-            jugadores=class y;
+            jugador=class y;
 
         }
     }
