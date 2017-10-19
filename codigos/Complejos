@@ -1,0 +1,104 @@
+#include <cstdlib>
+#include <iostream>
+#include <math.h>
+#include <conio.h>
+ 
+using namespace std;
+  struct Complejo{
+  float real;
+float imag;
+};
+ 
+void ingresoComplejo(Complejo &C, char mensaje[]);
+Complejo suma(Complejo C1, Complejo C2);
+Complejo resta(Complejo C1, Complejo C2);
+Complejo multiplicacion(Complejo C1, Complejo C2);
+Complejo division(Complejo C1, Complejo C2);
+ 
+void reporteComplejo(Complejo C,char mensaje[]);
+ 
+int main()
+{
+Complejo C1, C2,CS,CR,CM,CD;
+ 
+system("cls");
+ 
+int op;
+ 
+do{
+ingresoComplejo(C1," Primer Complejo n");
+ingresoComplejo(C2," Segundo Complejo\n");
+ 
+ 
+printf("1  Sumar complejos\n");
+printf("2  Restar complejos\n");
+printf("3  Multiplicar complejos\n");
+ 
+printf("   opcion: ");
+scanf("%d", &op);
+ 
+switch(op)
+{
+case 1:
+system("cls");
+CS=suma(C1,C2);
+reporteComplejo(CS,"\t\nComplejo Suma\n\n");
+break;
+ 
+case 2:
+system("cls");
+CR=resta(C1,C2);
+reporteComplejo(CR,"\t\nComplejo Resta\n\n");
+break;
+ 
+case 3:
+system("cls");
+CM=multiplicacion(C1,C2);
+reporteComplejo(CM,"\t\nComplejo Multiplicacion\n\n");
+break;
+ 
+}
+}while(op!=4);
+ 
+getch();
+return 0;
+} 
+ 
+void ingresoComplejo(Complejo &C, char mensaje[])
+{
+cout<<mensaje<<endl;
+cout<<" parte real : ";
+cin>>C.real;
+cout<<" parte imaginaria : ";
+cin>>C.imag;
+}
+Complejo suma(Complejo C1, Complejo C2)
+{
+Complejo S;
+S.real = C1.real + C2.real;
+S.imag = C1.imag + C2.imag;
+return S;
+}
+ 
+Complejo resta(Complejo C1, Complejo C2)
+{
+Complejo R;
+R.real=C1.real-C2.real;
+R.imag=C1.imag-C2.imag;
+return R;
+}
+ 
+Complejo multiplicacion(Complejo C1, Complejo C2)
+{
+Complejo M;
+M.real=C1.real*C2.real-C1.imag*C2.imag;
+M.imag=C1.imag*C2.real+C1.real+C2.imag;
+return M;
+}
+void reporteComplejo(Complejo C,char mensaje[])
+{
+cout<<mensaje<<endl;
+cout<<C.real;
+if(C.imag>0) cout<<"+";
+cout<<C.imag<<"i"<<endl;
+}
