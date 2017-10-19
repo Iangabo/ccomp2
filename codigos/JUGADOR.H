@@ -58,8 +58,13 @@ class jugador {
       nombre=y;
     }
     void print (){
-        int x=x+1;
-        cout<<"Jugador: "<<++x<<endl;
+        int x=1;
+        while(x<12){
+        cout<<"Jugador: "<<x++<<endl;
+
+        cout <<"El nombre del jugador es: "<<nombre<<endl;
+        cout <<"La posicion del jugador es: "<<posicion<<endl;
+        cout <<"El numero del jugador es: "<<num<<endl;
 
         if (agresividad>5){
             cout <<"El jugador esta agresivo!!,dejalo jugar!"<<endl;
@@ -67,9 +72,7 @@ class jugador {
         else{
             cout <<"El jugador esta calmado, cambialo"<<endl;
         }
-        cout <<"El nombre del jugador es: "<<nombre<<endl;
-        cout <<"La posicion del jugador es: "<<posicion<<endl;
-        cout <<"El numero del jugador es: "<<num<<endl;
+        }
     }
 };
 
