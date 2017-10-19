@@ -1,0 +1,180 @@
+//main
+#include <iostream>
+#include "jugador.h"
+
+
+
+
+using namespace std;
+
+int main()
+{
+
+
+    equipo BorussiaDortmund("Borussia Dortmund",11);
+    BorussiaDortmund.print();
+
+    jugador Reus("Reus", "Delantero", 11, 8);
+    Reus.print();
+    jugador Abameyang("Abameyang", "Delantero centro", 17, 8);
+    Abameyang.print();
+    jugador Dembele("Dembele", "Medio Campista", 11, 9);
+    Dembele.print();
+    jugador Kagawa("Kagawa", "Medio Campista", 23, 7);
+    Kagawa.print();
+    jugador Burki("Burki", "Portero", 1, 5);
+    Burki.print();
+    jugador Sokratis("  Sokratis", "Defensa", 25, 5);
+    Sokratis.print();
+    jugador Bartra("Bartra", "Defensa", 5, 6);
+    Bartra.print();
+    jugador Subotic("Subotic", "Defensa", 4, 4);
+    Subotic.print();
+    jugador Gotze("Gotze", "Delantero", 10, 9);
+    Gotze.print();
+    jugador Castro("Castro", "Defensa", 27, 4);
+    Castro.print();
+    jugador Rode("Rode", "Volante", 18, 5);
+    Rode.print();
+    jugador Shurrle("Shurrle", "Extremo Izquierdo", 21, 7);
+    Shurrle.print();
+
+    equipo1 BayernMunich("Bayern Munich",11);
+    BayernMunich.print();
+
+    jugador Never("Neuer","arquero",1,3);
+    Never.print();
+    jugador Gotz("Gotz","defensa",20,6);
+    Gotz.print();
+    jugador Hummels("Hummels","defensa",5,5);
+    Hummels.print();
+    jugador Rafinha("Rafinha","defensa",13,6);
+    Rafinha.print();
+    jugador Ribery("Ribéry","centrocampista",7,3);
+    Ribery.print();
+    jugador Xabi("Xabi","centrocampista",14,6);
+    Xabi.print();
+    jugador Kimmich("Kimmich","centrocampista",32,8);
+    Kimmich.print();
+    jugador Lewandowski("Lewandowski","delantero",9,9);
+    Lewandowski.print();
+    jugador Muller("Muller","delantero",25,8);
+    Muller.print();
+    jugador Robben("Robben","delantero",10,7);
+    Robben.print();
+    jugador Lahm("Lahm","centrocampista",21,6);
+    Lahm.print();
+
+
+
+
+	return 0;
+}
+//class
+#ifndef JUGADOR_H
+#define JUGADOR_H
+
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class equipo {
+public:
+    string name;
+    int size;
+    equipo(){
+    }
+    equipo(string x,int y){
+
+        name=x;
+        size=y;
+    }
+    void setname(string x){
+        name=x;
+    }
+    void setsize(int y){
+        size=y;
+    }
+    void print(){
+        cout<<"El equipo numero 1 es: "<<name<<endl;
+    }
+
+};
+
+class equipo1 {
+public:
+    string name;
+    int size;
+    equipo1(){
+    }
+    equipo1(string x,int y){
+
+        name=x;
+        size=y;
+    }
+    void setname(string x){
+        name=x;
+    }
+    void setsize(int y){
+        size=y;
+    }
+    void print(){
+        cout<<"El equipo numero 1 es: "<<name<<endl;
+    }
+
+};
+
+
+
+
+class jugador {
+  public:
+    string nombre,posicion;
+    int num, agresividad;
+
+    jugador() {
+    }
+    jugador (string x,string y, int z, int w){
+
+      nombre=x;
+      posicion=y;
+      num=z;
+      agresividad=w;
+    }
+    void setagresividad(int x){
+      agresividad=x;
+    }
+    void setnumero(int z){
+      num=z;
+    }
+    void setposicion(string w){
+      posicion=w;
+    }
+    void setnombre(string y){
+      nombre=y;
+    }
+    void print (){
+        int x=1;
+        while(x<12){
+        cout<<"Jugador: "<<x++<<endl;
+
+        cout <<"El nombre del jugador es: "<<nombre<<endl;
+        cout <<"La posicion del jugador es: "<<posicion<<endl;
+        cout <<"El numero del jugador es: "<<num<<endl;
+
+        if (agresividad>5){
+            cout <<"El jugador esta agresivo!!,dejalo jugar!"<<endl;
+        }
+        else{
+            cout <<"El jugador esta calmado, cambialo"<<endl;
+        }
+        }
+    }
+};
+
+
+
+
+#endif
