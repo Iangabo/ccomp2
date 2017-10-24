@@ -1,0 +1,38 @@
+/*Implemente un programa que contenga la clase Fecha, la cual tendrá dia, mes y año como atributos. En el momento de establecer el dia, mes y año, debe validarse si la fecha tiene sentido, por ejemplo: el 31 del mes 02 no existe. La clase se debe considerar los siguientes métodos:
+- evaluar si la fecha pertenece a un año bisiesto;
+- un método para adicionar dias a la fecha establecida, por ejemplo, si la fecha es 28 de febrero y le sumo 4 dias, la fecha debe verificar el año, y de ser bisiesto debe modificarse a 03 de marzo, caso contrario 04 de marzo.
+*/
+#include <iostream>
+#include "FECHA.h"
+
+
+using namespace std;
+
+int main()
+{
+    FECHA Enero("Enero",1,2017);
+    Enero.print();
+    FECHA Febrero("Febrero",2,2017);
+    Febrero.print();
+    FECHA Marzo("Marzo",3,2017);
+    Marzo.print();
+    FECHA Abril("Abril",4,2017);
+    Abril.print();
+    FECHA Mayo("Mayo",5,2017);
+    Mayo.print();
+    FECHA Junio("Junio",6,2017);
+    Junio.print();
+    FECHA Julio("Julio",7,2017);
+    Julio.print();
+    FECHA Agosto("Agosto",8,2017);
+    Agosto.print();
+    FECHA Septiembre("Septiembre",9,2017);
+    Septiembre.print();
+    FECHA Octubre("Octubre",10,2017);
+    Octubre.print();
+    FECHA Noviembre("Noviembre",11,2017);
+    Noviembre.print();
+    FECHA Diciembre("Diciembre",12,2017);
+    Diciembre.print();
+    return 0;
+}
