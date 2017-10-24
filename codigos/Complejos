@@ -1,104 +1,131 @@
-#include <cstdlib>
+//Numeros Complejos en una sola funcion
 #include <iostream>
-#include <math.h>
-#include <conio.h>
- 
+
 using namespace std;
-  struct Complejo{
-  float real;
-float imag;
+
+class Complejos{
+    public:
+        Complejos();
+        void resta(void);
+        void suma(void);
+        void print(void);
+    public:
+        double real1;
+        double imaginario1;
+        double real2;
+        double imaginario2;
+        double a;
+        double b;
+
 };
- 
-void ingresoComplejo(Complejo &C, char mensaje[]);
-Complejo suma(Complejo C1, Complejo C2);
-Complejo resta(Complejo C1, Complejo C2);
-Complejo multiplicacion(Complejo C1, Complejo C2);
-Complejo division(Complejo C1, Complejo C2);
- 
-void reporteComplejo(Complejo C,char mensaje[]);
- 
-int main()
+Complejos::Complejos(){real1=imaginario1=real2=imaginario2=a=b=0;}
+void Complejos::resta(void)
 {
-Complejo C1, C2,CS,CR,CM,CD;
- 
-system("cls");
- 
-int op;
- 
-do{
-ingresoComplejo(C1," Primer Complejo n");
-ingresoComplejo(C2," Segundo Complejo\n");
- 
- 
-printf("1  Sumar complejos\n");
-printf("2  Restar complejos\n");
-printf("3  Multiplicar complejos\n");
- 
-printf("   opcion: ");
-scanf("%d", &op);
- 
-switch(op)
-{
-case 1:
-system("cls");
-CS=suma(C1,C2);
-reporteComplejo(CS,"\t\nComplejo Suma\n\n");
-break;
- 
-case 2:
-system("cls");
-CR=resta(C1,C2);
-reporteComplejo(CR,"\t\nComplejo Resta\n\n");
-break;
- 
-case 3:
-system("cls");
-CM=multiplicacion(C1,C2);
-reporteComplejo(CM,"\t\nComplejo Multiplicacion\n\n");
-break;
- 
+    a=real1-real2;
+    b=imaginario1-imaginario2;
 }
-}while(op!=4);
- 
-getch();
-return 0;
-} 
- 
-void ingresoComplejo(Complejo &C, char mensaje[])
+
+void Complejos::suma(void)
 {
-cout<<mensaje<<endl;
-cout<<" parte real : ";
-cin>>C.real;
-cout<<" parte imaginaria : ";
-cin>>C.imag;
+    a=real1+real2;
+    b=imaginario1+imaginario2;
 }
-Complejo suma(Complejo C1, Complejo C2)
+
+void Complejos::print()
 {
-Complejo S;
-S.real = C1.real + C2.real;
-S.imag = C1.imag + C2.imag;
-return S;
+    cout<< a << "(+i)" << b << "\n";
 }
- 
-Complejo resta(Complejo C1, Complejo C2)
+
+int main(){
+
+    Complejos numero;
+    cout<<"ingrese el numero real 1 y el numero imagianrio 1: "<<endl;
+    cin>>numero.real1;
+    cin>>numero.imaginario1;
+    cout<<"ingrese el numero real 2 y el numero imagianrio 2: "<<endl;
+    cin>>numero.real2;
+    cin>>numero.imaginario2;
+    cout<<"La resta de los dos numeros es: "<<endl;
+    numero.resta();
+    numero.print();
+    cout<<"La suma de los dos numeros es: "<<endl;
+    numero.suma();
+    numero.print();
+
+
+
+}
+
+//Numeros Complejos
+//Class
+
+#ifndef COMPLEJOS_H
+#define COMPLEJOS_H
+
+
+#include <iostream>
+
+using namespace std;
+
+class Complejos{
+    public:
+        Complejos();
+        void resta(void);
+        void suma(void);
+        void print(void);
+    public:
+        double real1;
+        double imaginario1;
+        double real2;
+        double imaginario2;
+        double a;
+        double b;
+
+
+Complejos::Complejos(){real1=imaginario1=real2=imaginario2=a=b=0;}
+void Complejos::resta(void)
 {
-Complejo R;
-R.real=C1.real-C2.real;
-R.imag=C1.imag-C2.imag;
-return R;
+    a=real1-real2;
+    b=imaginario1-imaginario2;
 }
- 
-Complejo multiplicacion(Complejo C1, Complejo C2)
+
+void Complejos::suma(void)
 {
-Complejo M;
-M.real=C1.real*C2.real-C1.imag*C2.imag;
-M.imag=C1.imag*C2.real+C1.real+C2.imag;
-return M;
+    a=real1+real2;
+    b=imaginario1+imaginario2;
 }
-void reporteComplejo(Complejo C,char mensaje[])
+
+void Complejos::print()
 {
-cout<<mensaje<<endl;
-cout<<C.real;
-if(C.imag>0) cout<<"+";
-cout<<C.imag<<"i"<<endl;
+    cout<< a << "(+i)" << b << "\n";
 }
+};
+#endif
+
+
+//main
+#include<iostream>
+#include "Complejos.h"
+
+using namespace std;
+int main(){
+
+    Complejos numero;
+    cout<<"ingrese el numero real 1 y el numero imagianrio 1: "<<endl;
+    cin>>numero.real1;
+    cin>>numero.imaginario1;
+    cout<<"ingrese el numero real 2 y el numero imagianrio 2: "<<endl;
+    cin>>numero.real2;
+    cin>>numero.imaginario2;
+    cout<<"La resta de los dos numeros es: "<<endl;
+    numero.resta();
+    numero.print();
+    cout<<"La suma de los dos numeros es: "<<endl;
+    numero.suma();
+    numero.print();
+
+
+
+}
+
+
