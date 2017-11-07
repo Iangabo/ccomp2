@@ -1,0 +1,18 @@
+#include <iostream>
+#include "Empleado.h"
+#include "FECHA.h"
+
+using namespace std;
+
+int main()
+{
+    Empresa REA("REA",3);
+    REA.print();
+
+    Empleado Pedro("Pedro","Marzo",3500);
+    Pedro.print();
+    Empleado Pablo("Pablo","Marzo",2500);
+    Pablo.print();
+    Empleado Jose("Jose","Marzo",2500);
+    Jose.print();
+}
