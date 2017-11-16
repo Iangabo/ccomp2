@@ -1,0 +1,77 @@
+//pointarray.h
+#ifndef POINTARRAY_H
+#define POINTARRAY_H
+
+
+
+class PointArray{
+
+
+
+	int size;
+	Point *points;
+
+	void resize (int size);
+
+public:
+	PointArray(){
+        size = 0;
+        points = new Point[size];
+        }
+	PointArray(const Point pts[], const int size){
+	    this -> size = size;
+	    points = new Point[size];
+	    }
+	PointArray(const PointArray &pv);
+	~PointArray(){
+	    delete [] points;
+	    }
+	void clear();
+	int getSize() const {
+	    return size;
+	    }
+	void push_back(const Point &p){
+        resize (size+1);
+        points [size-1]=p;
+
+	}
+	void insert(const int pos, const Point &p){
+        resize (size+1);
+        for (int i = size-1 ; i > pos; i--){
+            points[i] = points[i-1];
+        }
+        points[pos] = p;
+	}
+	void PointArray::remove(const int pos){
+        if(pos>= && pos < size){
+            fot (int i = pos , i < size-2 ; i++){
+                points[i] = points[i+1];
+
+            }
+            resize(size-1)
+        }
+	}
+	Point *get (const int pos);
+	const Point *get(const int pos) const;
+};
+#endif
+
+
+//cpp
+#include "PointArray.h"
+#include <iostream>
+using namespace std;
+#include "Point.h"
+
+PointArray::PointArray(){
+    size = 0;
+    points = new Point[0];
+}
+
+PointArray::PointArray(const Point ptsToCopy[], const int toCopySize){
+    size = toCopySize;
+    points = new Point[toCopySize];
+    for(int i = 0 ; i < toCopySize ; ++i){
+        points[i] = ptsToCopy[i];
+    }
+}
